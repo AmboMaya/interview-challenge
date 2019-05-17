@@ -1,0 +1,20 @@
+.navigation {
+    color: #ffffff;
+    text-align: center;
+    background-color: #2FADC9;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.currentMonth {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: #177D91; 
+    color: #ffffff;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+}
