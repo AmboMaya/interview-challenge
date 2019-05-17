@@ -27,10 +27,6 @@ export default class AppointmentList extends React.Component {
         .catch((err) => err) 
     }
 
-    getProviderDetails = () => {
-        request.get('https://frontendchallenge2019.azurewebsites.net/api/Provider/{id}')
-    }
-
     render () {
         const appointments = this.state.appointments.map(appointment => {
             return <Appointment key={appointment.Id} id={appointment.Id} title={appointment.Title} name={appointment.Name} time={appointment.AvailableSlots}/>

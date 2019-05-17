@@ -7,18 +7,24 @@ import moment from 'moment'
 
 class App extends Component {
 	state = {
-		date : moment()
+		date : moment().format(),
+		
 	}
 
 	selectedDayListener = (e) => {
-		this.setState({selectedDate:moment(e)})	}
+		this.setState({date:moment(e)})	}
+
+	clickHandler = (e) => {
+
+	}
 	
 	render () {
+
 		return (
 			<div className='app'>
 				<Navigation />
 				<Date selectedDay={this.selectedDayListener}/>
-				<AppointmentList selectedDay={this.props.date}/>
+				<AppointmentList selectedDay={this.state.date} onClick={this.clickHandler}/>
 			</div>
 		)
 	}
